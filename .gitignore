@@ -1,2 +1,36 @@
 
 **/target/**
+**/.DS_Store
+
+Ch05_SpringBoot/HELP.md
+!Ch05_SpringBoot/.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+Ch05_SpringBoot/.apt_generated
+Ch05_SpringBoot/.classpath
+Ch05_SpringBoot/.factorypath
+Ch05_SpringBoot/.project
+Ch05_SpringBoot/.settings
+Ch05_SpringBoot/.springBeans
+Ch05_SpringBoot/.sts4-cache
+
+### IntelliJ IDEA ###
+**/.idea
+**/*.iws
+**/*.iml
+**/*.ipr
+
+### NetBeans ###
+/Ch05_SpringBoot/nbproject/private/
+/Ch05_SpringBoot/nbbuild/
+/Ch05_SpringBoot/dist/
+/Ch05_SpringBoot/nbdist/
+/Ch05_SpringBoot/.nb-gradle/
+Ch05_SpringBoot/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+Ch05_SpringBoot/.vscode/
