@@ -31,7 +31,7 @@ public class Exercise {
     }
 
     public ExerciseDTO getDTO() {
-        return new ExerciseDTO(question,
+        return new ExerciseDTO(id, question,
                 answers.stream().map(Answer::getAnswer).collect(Collectors.toList()),
                 correctAnswer);
     }

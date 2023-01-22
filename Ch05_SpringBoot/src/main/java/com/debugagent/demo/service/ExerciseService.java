@@ -18,10 +18,10 @@ import java.util.*;
 @Transactional
 public class ExerciseService {
     private static final ExerciseDTO[] EXERCISES = {
-            new ExerciseDTO("1/2 * 1/2 =", List.of("2/2", "1/2", "1/8"), "1/4"),
-            new ExerciseDTO("1/2 + 1/2 =", List.of("2/2", "1/2", "1/8"), "1"),
-            new ExerciseDTO("1/2 : 1/2 =", List.of("2/2", "1/2", "1/8"), "1"),
-            new ExerciseDTO("1/2 - 1/2 =", List.of("0/2", "-1/2", "1/0"), "0")
+            new ExerciseDTO(1,"1/2 * 1/2 =", List.of("2/2", "1/2", "1/8"), "1/4"),
+            new ExerciseDTO(2,"1/2 + 1/2 =", List.of("2/2", "1/2", "1/8"), "1"),
+            new ExerciseDTO(3,"1/2 : 1/2 =", List.of("2/2", "1/2", "1/8"), "1"),
+            new ExerciseDTO(4,"1/2 - 1/2 =", List.of("0/2", "-1/2", "1/0"), "0")
     };
 
     private final Random RANDOM = new Random();
@@ -50,6 +50,12 @@ public class ExerciseService {
     public ExerciseDTO getExercise() {
         return exerciseRepository.findAll()
                 .get(RANDOM.nextInt((int)exerciseRepository.count())).getDTO();
+    }
+
+    public ExerciseDTO getExerciseById(long id) {
+        return exerciseRepository.findById(id)
+                .orElseThrow()
+                .getDTO();
     }
 
     public void submitExercise(ExerciseDTO exerciseDTO) {

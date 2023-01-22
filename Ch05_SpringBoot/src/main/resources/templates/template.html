@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello ThymeLeaf</title>
+</head>
+<body>
+    <form method="post" action="/answer">
+        <fieldset>
+            <legend th:text="${question}">This is the question...</legend>
+
+            <div th:each="answer : ${answers}">
+                <input type="radio" th:id="${answer}" name="correctAnswer" th:value="${answer}">
+                <label th:for="${answer}" th:text="${answer}">Answer</label>
+            </div>
+            <input type="hidden" name="questionId" th:value="${questionId}">
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
