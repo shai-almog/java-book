@@ -1,0 +1,9 @@
+{
+  "firstName": "Shai",
+  "surname": "Almog",
+  "website": "https://debugagent.com/",
+  "active": true,
+  "details":[
+    {"key": "value"}
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/schemas/User.json",
+  "type": "object",
+  "definitions": {
+    "Gender": {
+      "type": "string",
+      "enum": ["male", "female"]
+    }
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "User's full name.",
+      "maxLength": 80
+    },
+    "email": {
+      "description": "User's email.",
+      "type": "string",
+      "format": "email"
+    },
+    "date_of_birth": {
+      "type": "string",
+      "description": "Date of uses birth in the one and only date standard: ISO 8601.",
+      "format": "date"
+    },
+    "gender": {
+      "$ref" : "#/definitions/Gender"
+    }
+  },
+  "required": ["name", "email"]
+}
