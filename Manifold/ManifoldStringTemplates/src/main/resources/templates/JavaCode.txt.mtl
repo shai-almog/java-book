@@ -1,0 +1,9 @@
+<%-- ManTL file --%>
+<%@ params(String className, String body) %>
+package com.debugagent.generated;
+
+public class ${className} {
+    public static void main(String[] argv) {
+        ${body}
+    }
+}
