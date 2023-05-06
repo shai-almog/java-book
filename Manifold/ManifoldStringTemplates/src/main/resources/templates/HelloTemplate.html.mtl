@@ -1,3 +1,4 @@
+<%@ import templates.JavaCode %>
 <%@ params(String title, String body) %>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,5 +8,6 @@
 </head>
 <body>
     ${body}
+    <%@ include JavaCode("ClassName", "System.exit(0);") %>
 </body>
 </html>
