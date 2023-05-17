@@ -23,7 +23,7 @@ public class Main {
         Sizable s = str;
         Sizable v = strings;
         s.size();
-        Sizable z = new MySizeClass();
-        z.size();
+        //Sizable z = new MySizeClass();
+        //z.size();
     }
 }
